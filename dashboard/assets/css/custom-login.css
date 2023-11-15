@@ -1,0 +1,65 @@
+.form-group{
+    margin: 12px 0 0 0;
+}
+
+
+.btn .material-icons{
+    font-size: 24px;
+}
+
+
+.navbar-brand img.logo{
+    height: 50px;
+}
+
+.login-page .login-link{ display: none!important; }
+.signup-page .signup-link{ display: none!important; }
+
+.login-page .form-group.label-floating label.control-label, 
+.login-page .form-group.label-placeholder label.control-label,
+.signup-page .form-group.label-floating label.control-label, 
+.signup-page .form-group.label-placeholder label.control-label{
+    left: 55px;
+    top: 0px;
+}
+
+.login-page .form-group.label-static label.control-label,
+.login-page .form-group.label-floating.is-focused label.control-label,
+.login-page .form-group.label-floating:not(.is-empty) label.control-label,
+.signup-page .form-group.label-static label.control-label,
+.signup-page .form-group.label-floating.is-focused label.control-label,
+.signup-page .form-group.label-floating:not(.is-empty) label.control-label {
+  top: -28px;
+}
+
+.well-white{
+    background-color: transparent;
+}
+
+.content .category{
+    text-transform: capitalize;
+}
+/*#START[for register page]*/
+#participants p {
+    font-size: 22px;
+    line-height: 3.42857;
+    text-align: center;
+}
+
+#participants .form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label{
+    font-size: 14px;
+}
+
+
+#participants .form-group .checkbox label, .form-group .radio label, .form-group label, .form-group .label-on-left, .form-group .label-on-right {
+    line-height: 2.42857;
+}
+
+
+#participants .radio label span{
+    top: 8px;
+}
+
+/*#END[for register page]*/
+
+

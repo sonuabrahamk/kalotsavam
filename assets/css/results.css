@@ -1,0 +1,34 @@
+.card-pricing{
+    position: relative;
+}
+
+.card-pricing .card-title{
+    margin: 5px 0;
+    font-size: 69%;
+}
+
+.card-pricing .category{
+    font-size: 12px;
+}
+
+.card-pricing .img-circle{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+.card-pricing .content{
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.card-pricing .content:hover{
+    position: relative;
+    background-color: #e7e7e7;
+}
+
+.card-pricing .content:active{
+    top: -1;
+}

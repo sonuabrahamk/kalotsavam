@@ -1,0 +1,19 @@
+
+.card form [class*="col-"]:first-child{
+    padding: 6px;
+}
+
+.card .form-group{
+    text-align: center;
+}
+
+.form-group .form-control{
+    display: inline-block;
+    width:85%;
+}
+
+.form-group .material-icons{
+    vertical-align: middle;
+    color: #26c6da;
+}
+
