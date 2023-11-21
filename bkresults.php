@@ -6,7 +6,7 @@
         <link rel="icon" type="image/png" href="assets/img/logo.png">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>Kalotsavam 2019 | Carmelaram Mount Carmel Parish</title>
+        <title>Kalotsavam 2023 | Carmelaram Mount Carmel Parish</title>
 
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
