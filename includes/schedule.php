@@ -21,12 +21,12 @@
                                             Venue map
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="index.html#day2" data-toggle="tab">
                                             <i class="material-icons">map</i>
                                             Road map
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
