@@ -3,7 +3,7 @@
     $host = "localhost";
     $uname = "root";
     $upass = "";
-    $db = "kallolsavam";
+    $db = "kalotsavam";
 
     // $host = "localhost";
     // $uname = "lamitj19_cbcmandya_user";

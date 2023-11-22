@@ -42,12 +42,25 @@ height: 100vh;
     color: white;
 }
 
+.navbar-custom{
+    /* background-color: #c333cc; */
+    background: url('../img/navbar_bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
 .navbar-brand img.logo{
     height: 50px;
 }
 
 .navbar .navbar-brand{
     padding: 0;
+}
+
+.navbar .navbar-nav>li>a{
+    font-weight: bold;
+    font-size: 16px;
+    color: #32385e;
 }
 
 .page-header .container{
@@ -158,4 +171,21 @@ height: 100vh;
 
 .page-header{
     transition: all ease-in-out 3s;
+}
+
+.title-head{
+    text-align: center;
+    margin-top: 0 !important; 
+}
+
+.title-img {
+    height: 250px;
+}
+
+.footer {
+    height: 70px;
+}
+
+.result-header{
+    height: 150px;
 }

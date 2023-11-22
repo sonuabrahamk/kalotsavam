@@ -31,64 +31,7 @@
     <body class="index-page" ng-app="shellsApp" style="overflow-x: hidden;">
 
         <?php include('includes/alerts.php'); ?>
-        <nav class="navbar navbar-transparent navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.php">
-                        <img class="logo" id="navLogo" src="assets/img/mandya_flag.png">
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="navigation-example">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="index.php">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.php#section-events">
-                                Events
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.php#section-teams">
-                                Maps
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.php#section-schedule">
-                                Schedule
-                            </a>
-                        </li>
-                        <li>
-                            <a href="results.php">
-                                Results
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right hide">
-                        <li>
-                            <a href="https://www.facebook.com/">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php include('includes/navbar.php'); ?>
         
         <div class="container">
             <div class="row" style="margin-top: 100px;">   
@@ -114,7 +57,7 @@
                                                 <h3 class="wizard-title" id="wizTitle">
                                                     <?php echo $event; ?>
                                                 </h3>
-                                                <h5>Category: <?php echo $category; ?></h5>
+                                                <h5><b>Category: <?php echo $category; ?></b></h5>
                                             </div> 
                                             <div style="clear: both"></div>
                                         </div>
@@ -186,20 +129,14 @@
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="assets/js/material.min.js"></script>
-    <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
-    <script src="assets/js/material-kit.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        $().ready(function(){
-            // materialKitDemo.initContactUs2Map();
-
-            $('nav').removeClass('navbar-transparent');
-            $('#navLogo').attr('src','assets/img/mandya_flag_blue.png');
-
-
-        
+    <!-- <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="assets/js/material-kit.js" type="text/javascript"></script> -->
+    <script>
+        $(document).ready(function() {
+            $('.navbar-nav>li>a').click(function() {
+                window.location.href = './';
+            });
         });
-
-
     </script>
+
 </html>

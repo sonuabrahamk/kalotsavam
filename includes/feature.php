@@ -1,7 +1,9 @@
-<div class="features-1">
+<div class="features-1" style="padding-top: 0;">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <h2 class="title">10<sup>th</sup> Bible Kalotsavam 2022</h2>
+            <h2 class="title-head">
+                <img class="title-img" src="assets/img/kalotsavamlogo_line.png">
+            </h2>
             <h5 class="description">
                 <strong><i>“It is written, ‘One does not live by bread alone, but by every word that comes from the mouth of God’.”</i> Matthew 4:4</strong>. God’s word is a source of life which contains infinite help and wisdom. When the Word of God is read in the spirit of faith, it leads to unimaginable spiritual growth. To encourage, motivate and inculcate the habit of regularly reading of the Word of God, various events are organized for the Catechism students throughout the year. The various topics and events in Bible Kalotsavam give opportunity for children with different talents to read the Bible and interpret it according to their talent - either in the form of an Essay, Story, Drawing, Mono Act, Dance, Mime etc.,
             </h5>
@@ -21,38 +23,4 @@
         <br>
         <br>
     </div>
-</div>
-
-<div class="row hide">
-    <div class="col-md-4">
-        <div class="info">
-            <div class="icon icon-info">
-                <i class="material-icons">chat</i>
-            </div>
-            <h4 class="info-title">Free Chat</h4>
-            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="info">
-            <div class="icon icon-success">
-                <i class="material-icons">verified_user</i>
-            </div>
-            <h4 class="info-title">Verified Users</h4>
-            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="info">
-            <div class="icon icon-danger">
-                <i class="material-icons">fingerprint</i>
-            </div>
-            <h4 class="info-title">Fingerprint</h4>
-            <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-        </div>
-    </div>
-</div>
-
 </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-transparent navbar-fixed-top">
+<nav class="navbar navbar-fixed-top navbar-custom">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.php">
-                <img class="logo" id="navLogo" src="assets/img/mandya_flag.png">
+                <img class="logo" id="navLogo" src="./assets/img/mandya_flag_white.png">
             </a>
         </div>
 
@@ -25,12 +25,12 @@
                         Events
                     </a>
                 </li>
-                <!-- <li>
+                <li>
                     <a href="#section-teams">
                         Maps
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#section-schedule">
                         Schedule
                     </a>

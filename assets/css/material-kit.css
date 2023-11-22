@@ -5762,7 +5762,8 @@ footer .pull-center {
 
 .presentation-page .page-header,
 .index-page .page-header {
-  height: 90vh;
+  height: 675px;
+  margin-top: 70px;
   overflow: hidden;
 }
 .presentation-page .brand,
