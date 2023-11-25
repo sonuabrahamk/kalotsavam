@@ -1,0 +1,9 @@
+BEGIN
+  
+update `master_data` SET
+	POINTS = RANK_POINTS + GRADE_POINTS
+WHERE SECTION = P_SECTION AND STATUS='PRESENT';
+
+commit;
+
+END
