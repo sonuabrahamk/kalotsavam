@@ -165,7 +165,7 @@ if(!isset($_SESSION['uid'])){
                                     <ul class="dropdown-menu">
                                         <?php 
                                             require('assets/snippets/connect.php');
-                                            $res3 = mysqli_query($connect,'SELECT DISTINCT(NAME) FROM events WHERE STATUS="PUBLISHED"');
+                                            $res3 = mysqli_query($connect,'SELECT DISTINCT(NAME) FROM events WHERE STATUS in ("PUBLISHED","APPROVED")');
                                             while($row = mysqli_fetch_array($res3)){
                                                 echo '<li class="eventOpt"><a href="#">'.$row[0].'</a></li>';
                                             }
@@ -184,7 +184,7 @@ if(!isset($_SESSION['uid'])){
                                     <ul class="dropdown-menu">
                                         <?php 
                                             require('assets/snippets/connect.php');
-                                            $res4 = mysqli_query($connect,'SELECT DISTINCT(CATEGORY) FROM events WHERE STATUS="PUBLISHED"');
+                                            $res4 = mysqli_query($connect,'SELECT DISTINCT(CATEGORY) FROM events WHERE STATUS in ("PUBLISHED","APPROVED")');
                                             while($row = mysqli_fetch_array($res4)){
                                                 echo '<li class="catOpt"><a href="#">'.$row[0].'</a></li>';
                                             }
