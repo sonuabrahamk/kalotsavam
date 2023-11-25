@@ -4,7 +4,7 @@
 require_once('TCPDF/tcpdf.php');
 
 // create new PDF document
-$pdf = new TCPDF('P', PDF_UNIT, 'A3', true, 'UTF-8', false);
+$pdf = new TCPDF('L', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
@@ -17,7 +17,7 @@ $pdf->SetSubject('BK Results');
 $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
 
 // set auto page breaks
-$pdf->SetAutoPageBreak(FALSE, PDF_MARGIN_BOTTOM);
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 
 // set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
@@ -59,28 +59,38 @@ if($res = mysqli_query($connect,$sql)){
     {     
         if(($row['RANK'] > 0)&&($row['RANK'] <= 3)){
             $content .= '<tr style="background-color: #55efc4">  
-                            <td style=""><b>'.$row["CHEST_NO"].'</b><br />
-                                '.$row["FULL_NAME"].'<br/>
-                                '.$row["PARISH"].'
-                            </td>  
-                            <td style="">'.$row["GRADE"].'</td>
-                            <td style="">'.$row["RANK"].'</td>
-                            <td style="">'.$row["POINTS"].'</td>
+                            <td style="">'.$row["CHEST_NO"].'</td>  
+                            <td style="">'.$row["FULL_NAME"].'</td>  
+                            <td style="">'.$row["PARISH"].'</td>  
+                            <td style="">'.$row["FORANE"].'</td>  
+                            <td style="">'.$row["NAME"].'</td>  
+                            <td style="">'.$row["SECTION"].'</td>   
+                            <td style="">'.$row["MARKS"].'</td>  
+                            <td style="">'.$row["GRADE"].'</td>  
+                            <td style="">'.$row["GRADE_POINTS"].'</td> 
+                            <td style="">'.$row["RANK"].'</td>   
+                            <td style="">'.$row["RANK_POINTS"].'</td> 
+                            <td style="">'.$row["POINTS"].'</td>  
+                        </tr>  
+                            ';  
+        }  
+        else{
+            $content .= '<tr>  
+                            <td style="">'.$row["CHEST_NO"].'</td>  
+                            <td style="">'.$row["FULL_NAME"].'</td>  
+                            <td style="">'.$row["PARISH"].'</td>  
+                            <td style="">'.$row["FORANE"].'</td>  
+                            <td style="">'.$row["NAME"].'</td>  
+                            <td style="">'.$row["SECTION"].'</td>     
+                            <td style="">'.$row["MARKS"].'</td>  
+                            <td style="">'.$row["GRADE"].'</td>  
+                            <td style="">'.$row["GRADE_POINTS"].'</td> 
+                            <td style="">'.$row["RANK"].'</td>   
+                            <td style="">'.$row["RANK_POINTS"].'</td> 
+                            <td style="">'.$row["POINTS"].'</td>  
                         </tr>  
                             ';  
         } 
-        else{
-            $content .= '<tr>  
-                            <td style=""><b>'.$row["CHEST_NO"].'</b><br />
-                                '.$row["FULL_NAME"].'<br/>
-                                '.$row["PARISH"].'
-                            </td>
-                            <td style="">'.$row["GRADE"].'</td>
-                            <td style="">'.$row["RANK"].'</td>
-                            <td style="">'.$row["POINTS"].'</td>
-                        </tr>  
-                            ';  
-        }
     }       
 }
 
@@ -90,12 +100,20 @@ $html = <<<EOD
 </div>
 <hr/>
 <h5 style="text-align: center;">$event ($cat) Results</h5>
-<table cellpadding="8px" style="font-size: 10px; padding-left: 23%;" border="1">
+<table cellpadding="8px" style="font-size: 8px;" border="1">
         <tr>
-            <th style="width: 25%;padding: 5px 0; font-weight: bold; font-size: 12px;">Participant</th>
-            <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 12px;">GRADE</th>
-            <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 12px;">RANK</th>
-            <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 12px;">POINTS</th>
+            <th style="width: 5%;padding: 5px 0; font-weight: bold; font-size: 10px;">CT NO</th>
+            <th style="width: 12%;padding: 5px 0; font-weight: bold; font-size: 10px;">NAME</th>
+            <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 10px;">PARISH</th>
+            <th style="width: 12%;padding: 5px 0; font-weight: bold; font-size: 10px;">FORANE</th>
+            <th style="width: 11%;padding: 5px 0; font-weight: bold; font-size: 10px;">EVENT</th>
+            <th style="width: 7%;padding: 5px 0; font-weight: bold; font-size: 10px;">SECTION</th>
+            <th style="width: 6%;padding: 5px 0; font-weight: bold; font-size: 10px;">MARKS</th>
+            <th style="width: 6%;padding: 5px 0; font-weight: bold; font-size: 10px;">GRADE</th>
+            <th style="width: 5%;padding: 5px 0; font-weight: bold; font-size: 10px;">GD PTS</th>
+            <th style="width: 5%;padding: 5px 0; font-weight: bold; font-size: 10px;">RANK</th>
+            <th style="width: 5%;padding: 5px 0; font-weight: bold; font-size: 10px;">RK PTS</th>
+            <th style="width: 6%;padding: 5px 0; font-weight: bold; font-size: 10px;">POINTS</th>
         </tr>
     $content
 </table>
