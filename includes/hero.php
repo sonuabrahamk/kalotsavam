@@ -1,5 +1,5 @@
 
-<div class="page-header header-filter" style="background-image: url('assets/img/main_bg.jpg');">
+<div class="page-header header-filter" style="background-image: url('assets/img/main_bg_img.jpeg');">
     <div class="container hero">
         <div class="row">
             <div class="col-md-6">
