@@ -10,17 +10,20 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong>Description</strong>
-                            <p>Subject will be given 5 minutes the time allotted for each candidate. Participants are not allowed to use any references like books, mobile phone etc. and to communicate with any other person.</p>
+                            <p>
+                                Subject will be given 5 minutes before the speech. The participant shall be given 5mins time to prepare for the topic.
+                                Along with the topic, the participant shall also be given a blank sheet which they can use for writing the notes. 
+                                This sheet can be used as a refernce while giving the speech.
+                                Participants are not allowed to use any references like books, mobile phone etc. and to communicate with any other person.
+                                Any participant found violating this shall be disqualified.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>                     
                             <p>Time limit: 5 minutes. A warning bell (single bell) will be given 1 minute before the cut off timeand the final bell (double bell), at the end of allowed time. Participant shall be disqualified if the performance exceeds the time limit.</p>
                         </div>
                     </div>
@@ -28,8 +31,6 @@
                         <div class="col-md-12">
                             <strong>Criteria for Evaluation </strong>
                             <p>Content: 60 (Ideas, Structure, Language), Style: 40 (Presentation, Pronunciation, Clarity, modulation, Fluency, Eye Contact) (Total: 100 marks) </p>
-                            
-                            <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
                         </div>
                     </div>
                 </div>

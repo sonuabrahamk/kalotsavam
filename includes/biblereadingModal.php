@@ -29,11 +29,9 @@
                         <div class="col-md-12">
                             <strong>Criteria for Evaluation </strong>
                             <p>Clarity & Language: 70, Style: 30 (Devotion, Structure). (Total marks: 100)</p>
-                            <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
             <div class="modal-footer">
                 <a href="results.php">

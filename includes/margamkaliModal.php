@@ -18,13 +18,10 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>
                         
-                            <p><strong>Time limit: 7 minutes.</strong></p>
+                            <p><strong>Time limit: 10 minutes.</strong></p>
                             <p>A warning bell (single bell) will be given 1 minute before the cut off time and the final bell (double bell), at the end of allowed time. The team shall be disqualified if the performance exceeds the time limit</p>
-                            <p><strong>Criteria for Evaluation:</strong> Performance & Perfection*: 50, Innovation & Creativity: 40, Make-up & Costume:10</p>
+                            <p><strong>Criteria for Evaluation:</strong> Performance & Perfection: 60,  Costume, Ornaments & Make-up: 20* Singing: 20</p>
                             <p>(Total: 100 marks)</p>
                             <p><strong>Instructions:<strong>
                             <ul>

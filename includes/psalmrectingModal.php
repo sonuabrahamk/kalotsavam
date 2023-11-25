@@ -17,18 +17,23 @@
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>           
                             <p>Time Limit: 3 minutes. No warning bell will be given. The final bell (double bell) will be given at the end of allowed time. Participant shall be disqualified if the performance exceeds the time limit.</p>
-                            <p>The Psalm should be recited by-heart and by joining the hands together. Exact Bible verses should be recited, no changes and modifications are allowed. Back ground or play back music is not allowed. Start with Psalm number and end with "Glory be to the Father....". POC samkeerthanam chanting style should be followed. Do not follow Malayalam poetry recitation style.</p>
+                            <p>
+                                <ul>
+                                    <li>Participants shall be provided with a plain slip by CBC Mandya.</li>
+                                    <li>Participants shall write the Psalm number they shall be recitnig.</li>
+                                    <li>
+                                        Before performing participants shall handover the updated slip to the judge who has the Holy Bible. The judge will then check if the Psalm is as per the topic given.The Judge then open to the correct page of Psalm in the Holy Bible. Once the judges are ready, they will ask the particpant to start.
+                                    </li>
+                                    <li>Only once the judge has given approval shall the participant start the performance and time shall be noted.</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <strong>Criteria for Evaluation </strong>
-                            <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
                             <p>Melody & Chanting: 60, Style: 40 (Devotion, Clarity). (Total marks: 100)</p>
                         </div>
                     </div>

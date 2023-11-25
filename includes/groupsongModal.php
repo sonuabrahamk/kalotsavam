@@ -10,17 +10,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong>Description</strong>
-                            <p> Only Christian devotional Malayalam songs are allowed. Fusion of songs may be allowed. Only one team (which may include students from Std Ito XII) is allowed from each parish. Minimum number of participants is 5 and maximum number of participants is 9. No instruments shall be allowed. 3 mikes will be provided for Group Song.   </p>
+                            <p> Only Christian devotional Malayalam songs are allowed. Fusion of songs may be allowed. Only one team (which may include students from Std I to XII) is allowed from each parish. Minimum number of participants is 5 and maximum number of participants is 9. No instruments shall be allowed. 3 mikes will be provided for Group Song.</p>
                         </div>
                     </div>
                 </div>
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>                        
                             <p>Time limit: 8 minutes.</p>
                             <p>A warning bell (single bell) will be given 1 minute before the cut off time and the final bell (double bell), at the end of allowed time. The team shall be disqualified if the performance exceeds the time limit.</p>
                             <p><strong>Criteria for Evaluation:</strong> Melody: 60, Rhythm: 30, Synchronization: 10 </p>

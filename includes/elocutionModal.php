@@ -17,10 +17,7 @@
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>                        
                             <p>Time limit: 5 minutes.</p><p>A warning bell (single bell) will be given 1 minute before the cut off time and the final bell (double bell), at the end of allowed time. Participant shall be disqualified if the performance exceeds the time limit.</p>
                         </div>
                     </div>
@@ -29,7 +26,6 @@
                             <strong>Criteria for Evaluation </strong>
                             <p>Content: 50 (Ideas, Structure, Language), Style: 50 (Presentation, Pronunciation, Clarity, modulation, Eye Contact) (Total: 100 marks) </p>
                             
-                            <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
                         </div>
                     </div>
                 </div>

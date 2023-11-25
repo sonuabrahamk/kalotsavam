@@ -17,19 +17,15 @@
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>                       
                             <p>Time limit: 5 minutes. A warning bell (single bell) will be given 1 minute before the cut off timeand the final bell (double bell), at the end of allowed time. Participant shall be disqualified if the performance exceeds the time limit.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <strong>Criteria for Evaluation </strong>
-                            <p>Acting: 60(Characterization, Sound Modulation, Dialogues), Theme: 40 (Originality, Language, Fluency (Total: 100 marks) </p>
+                            <p>Acting: 60(Characterization, Sound Modulation, Dialogues), Theme: 40 (Originality, Language, Fluency) (Total: 100 marks) </p>
                         
-                            <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
                         </div>
                     </div>
                 </div>

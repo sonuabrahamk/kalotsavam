@@ -19,9 +19,6 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>  
                             <p>Time limit: 3 minutes.</p>
                             <p>No warning bell will be given. The final bell (double bell) will be given at the end of allowed time. Participant shall be disqualified if the performance exceeds the time limit.</p> 
                                            

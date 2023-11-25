@@ -18,18 +18,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>
-                        
-                            <p><strong>Time limit: 7 minutes.</strong></p>
-                            <p>The pen drive contains only the song (in MP3 format) or a soft copy (MP3 format) should be submitted before 06 Nov 2022 to the secretary of the CFTs. The Forane secretaries are responsible to submit the soft copies (named with chest numbers) of all the teams participating from their Forane on or before 13 Nov 2022 to the CBC. The team leader should hold a pen drive contains only the song (in MP3 format) as a back-up and the same should be submitted to the control room in order to address any unexpected technical issues during the event.</p>
+                            <p><strong>Time limit: 5 minutes.</strong></p>
+                            <p>The Parish representivies are responsible to submit the soft copies mp3 format (named with chest numbers) to CBC atleast two weeks before the events. The team leader shall carry a pen drive that contains only the song (in MP3 format) as a back-up and the same should be submitted to the control room in order to address any unexpected technical issues during the event.</p>
                             <p>The final bell (double bell) will be given at the end of allowed time. The team shall be disqualified if the performance exceeds the time limit.</p>
                             <p>Criteria for Evaluation: Performance & Perfection*: 50, Innovation & Creativity: 40, Make-up & Costume:10</p>
                             <p>(Total: 100 marks)</p>
                             <p><strong>Instructions:<strong>
                             <ul>
-                                <li>Technical perfection includes Entry, Exit, Rhythmic Accuracy, Precision, Stage Balance& Synchronization.</li>
+                                <li>Technical perfection includes Entry, Exit, Rhythmic Accuracy, Precision, Stage Balance & Synchronization.</li>
                                 <li>Exit from the stage in between the performance is not allowed.</li>
                                 <li>Uniformity in appearance, steps and movements have positive effects.</li>
                                 <li>Use of hand gloves is compulsory.</li>

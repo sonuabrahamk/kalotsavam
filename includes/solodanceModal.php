@@ -17,10 +17,7 @@
                 <div class="instruction">
                     <div class="row">
                         <div class="col-md-12">
-                            <strong>General Rules</strong>
-                            <ul>
-                                <li ng-repeat="rule in event.rules"> {{ rule.line }}</li>
-                            </ul>                          
+                            <strong>General Rules</strong>                     
                             <p>Time limit: 5 minutes.</p>
                             <p>
                                 The pen drive contains only the song (in MP3 format) or a soft copy (MP3 format) should be submitted in advance. (The due date will be intimated by the CFT). The team leader should hold a pen drive contains only the song (in MP3 format) as a back-up and the same should be submitted to the control room in order to address any unexpected technical issues during the event.

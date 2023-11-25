@@ -32,40 +32,11 @@
                         </div>
                     </div>
                 </div>
-                <p>If you have more questions, don't hesitate to contact us! We're here to help!</p>
-                <div class="instruction">
-                    <div class="row">
-                        <div ng-repeat="coordinator in event.coordinators">
-                            <div ng-if="coordinator.designation == 'Staff'">
-
-                                <div class="col-md-4 col-md-offset-4 text-center" >
-                                    <small class="text-info">{{ coordinator.designation }} Coordinator</small><br>
-                                    <h6>{{ coordinator.name }}</h6>
-                                    <small>{{ coordinator.contact }}</small>
-                                    <!--<p>{{ coordinator.email }}</p>-->
-                                </div>
-                                <div class="col-md-4 text-center" >
-                                    <small>&nbsp;</small><br>
-                                    <h6>&nbsp;</h6>
-                                    <small>&nbsp;</small>
-                                    <!--<p>{{ coordinator.email }}</p>-->
-                                </div>
-                                <hr>
-                            </div>
-                            <div ng-if="coordinator.designation != 'Staff'">
-                                <div class="col-md-4 text-center" >
-                                    <small class="text-info">{{ coordinator.designation }} Coordinator</small><br>
-                                    <h6>{{ coordinator.name }}</h6>
-                                    <small>{{ coordinator.contact }}</small>
-                                    <!--<p>{{ coordinator.email }}</p>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="modal-footer text-center hide">
-                <button type="button" class="btn btn-info btn-round" data-dismiss="modal">Sounds good!</button>
+            <div class="modal-footer">
+                <a href="results.php">
+                    <button class="btn btn-result btn-info btn-round" id="">View Result</button>
+                </a>
             </div>
         </div>
     </div>
