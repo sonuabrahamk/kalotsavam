@@ -71,12 +71,12 @@ $html = <<<EOD
 <h5 style="text-align: center;">Biblia Stars Points Table</h5>
 <table cellpadding="8px" style="font-size: 8px;" border="1">
         <tr>
-            <th style="width: 15%;padding: 5px 0; font-weight: bold; font-size: 12px;">CATEGORY</th>
-            <th style="width: 25%;padding: 5px 0; font-weight: bold; font-size: 12px;">PARTICIPANT NAME</th>
-            <th style="width: 30%;padding: 5px 0; font-weight: bold; font-size: 12px;">PARISH</th>
-            <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 12px;">FORANE</th>
-            <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 12px;">RANK POINTS</th>
-            <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 12px;">GRADE POINTS</th>
+            <th style="width: 15%;padding: 5px 0; font-weight: bold; font-size: 10px;">CATEGORY</th>
+            <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 10px;">PARTICIPANT NAME</th>
+            <th style="width: 30%;padding: 5px 0; font-weight: bold; font-size: 10px;">PARISH</th>
+            <th style="width: 15%;padding: 5px 0; font-weight: bold; font-size: 10px;">FORANE</th>
+            <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 10px;">RANK POINTS</th>
+            <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 10px;">GRADE POINTS</th>
         </tr>
     $content
 </table>

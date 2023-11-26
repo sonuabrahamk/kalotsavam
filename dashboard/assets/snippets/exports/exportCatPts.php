@@ -45,18 +45,19 @@ $content = '';
 
 $cat = $_GET['cat'];
 
-$sql = "SELECT md.PARISH, md.FORANE, SUM(POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.STATUS='PUBLISHED' AND e.SECTION = md.SECTION JOIN `parish_category` pc on pc.PARISH = md.PARISH WHERE md.STATUS='PRESENT' AND pc.CATEGORY='".$cat."' GROUP BY md.FORANE, pc.CATEGORY, md.PARISH ORDER BY pc.CATEGORY, SUM(POINTS) DESC, SUM(RANK_POINTS) DESC, SUM(GRADE_POINTS) DESC";
+$sql = "SELECT md.PARISH, md.FORANE, SUM(POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.SECTION= md.SECTION AND e.STATUS in ('PUBLISHED','APPROVED') JOIN `parish_category` pc on pc.PARISH = md.PARISH AND pc.CATEGORY='".$cat."' WHERE md.STATUS='PRESENT' GROUP BY pc.PARISH ORDER BY SUM(POINTS) DESC, md.PARISH DESC";
 
 require('../connect.php');
 
 if($res = mysqli_query($connect,$sql)){
     $count = 1;
-    while($row = mysqli_fetch_array($res))  
+    while($row = mysqli_fetch_array($res))
     {   
         $content .= '<tr>   
-                        <td style="font-size: 10px;">'.$row["PARISH"].'</td>  
-                        <td style="font-size: 10px;">'.$row["FORANE"].'</td>  
-                        <td style="font-size: 10px;">'.$row["F_POINTS"].'</td>  
+                        <td style="font-size: 10px;">'.$count++.'</td>
+                        <td style="font-size: 10px;">'.$row["PARISH"].'</td>
+                        <td style="font-size: 10px;">'.$row["FORANE"].'</td>
+                        <td style="font-size: 10px;">'.$row["F_POINTS"].'</td>
                     </tr>  
                         ';  
     }       
@@ -70,6 +71,7 @@ $html = <<<EOD
 <h5 style="text-align: center;"> $cat Parish Points Table</h5>
 <table cellpadding="8px" style="font-size: 8px;" border="1">
         <tr>
+            <th style="width: 30%;padding: 5px 0; font-weight: bold; font-size: 12px;">RANK</th>
             <th style="width: 30%;padding: 5px 0; font-weight: bold; font-size: 12px;">PARISH</th>
             <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 12px;">FORANE</th>
             <th style="width: 20%;padding: 5px 0; font-weight: bold; font-size: 12px;">POINTS</th>

@@ -58,6 +58,86 @@
         
         <div class="container-fluid">
             <img class="img-responsive" src="../assets/img/BK_flag.jpg" />
+
+            
+            
+
+            <!-- Carousel container -->
+<div id="my-pics" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <?php
+            require ("assets/snippets/connect.php");
+            if($res = mysqli_query($connect, "SELECT * FROM `events` WHERE STATUS='PUBLISHED'")){
+                while($row = mysqli_fetch_array($res)){
+                    echo '
+                    <div class="item active">
+                        <div class="card">
+                            <div class="card-header" data-background-color="blue">
+                                <div class="col-lg-10">
+                                    <h3 class="wizard-title" id="wizTitle">
+                                        '. $row['NAME'] .'
+                                    </h3>
+                                    <h5><b>Category: '.$row['CATEGORY'].'</b></h5>
+                                </div>
+                                <div style="clear: both"></div>
+                            </div>
+                            <div class="card-content">  
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-bordered result-table">
+                                        <thead class="text-info">
+                                            <th>RANK</th>
+                                            <th>NAME</th>
+                                            <th>PARISH</th>
+                                            <th>FORANE</th>
+                                            <th>POINTS</th>
+                                        </thead>
+                                        <tbody>';
+        
+                    $section = $row["SECTION"];
+                    if($res1 = mysqli_query($connect,"SELECT * FROM `master_data` WHERE `RANK` <= 3 AND `RANK` > 0 AND SECTION='".$section."' ORDER BY `RANK`")){
+                    while($row1 = mysqli_fetch_array($res1)){
+        ?>
+                                    
+                                            <tr>
+                                                <td><?php echo $row1['RANK']; ?></td>
+                                                <td><?php echo $row1['FULL_NAME']; ?></td>
+                                                <td><?php echo $row1['PARISH']; ?></td>
+                                                <td><?php echo $row1['FORANE']; ?></td>
+                                                <td><?php echo $row1['POINTS']; ?></td>
+                                            </tr>
+                                                    
+        <?php
+                    }
+                    echo '
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ';
+                    }
+                }
+            }
+        ?>
+    </div>
+
+    <!-- Previous/Next controls -->
+    <a class="left carousel-control" href="#my-pics" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#my-pics" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+
+
             <div id="movement" class="owl-carousel">
                 <?php
                     require ("assets/snippets/connect.php");
@@ -116,13 +196,6 @@
 
                                 <?php
                             }
-                            else{
-                                ?>
-
-                                <h3 class="wizard-title">Results are not published yet!!</h3>
-
-                                <?php
-                            }
                         }
 
                         }
@@ -140,18 +213,11 @@
     <script src="../assets/js/material.min.js"></script>
     <!-- <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="assets/js/material-kit.js" type="text/javascript"></script> -->
-   
-    <script src="assets/js/owl.carousel.min.js"></script>
+
 
     <script>
 
         $(document).ready(function() {
-            $('#movement').owlCarousel({
-                items: 1,
-                autoplay: true,
-                navSpeed: 15000,
-                loop: true
-            });
 
             setInterval(() => {
                 window.location.reload();
