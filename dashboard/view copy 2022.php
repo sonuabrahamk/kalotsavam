@@ -131,13 +131,61 @@ if(!isset($_SESSION['uid'])){
 
 
                         <?php
-                            if ($res = mysqli_query($connect,"SELECT md.PARISH, md.FORANE, SUM(md.POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.SECTION = md.SECTION WHERE e.STATUS='PUBLISHED' AND md.STATUS='PRESENT' GROUP BY md.PARISH, md.FORANE ORDER BY SUM(POINTS) DESC, SUM(md.RANK_POINTS) DESC, SUM(md.GRADE_POINTS) DESC, PARISH ASC")){
+                            if ($res = mysqli_query($connect,"SELECT FORANE, SUM(POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.SECTION = md.SECTION WHERE e.STATUS = 'PUBLISHED' AND md.STATUS='PRESENT' AND e.CATEGORY <> 'Group' GROUP BY FORANE ORDER BY SUM(POINTS) DESC, SUM(RANK_POINTS) DESC, SUM(GRADE_POINTS) DESC, FORANE ASC")){
                                 if(mysqli_num_rows($res)){
                                     echo '
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" data-background-color="blue">
+                                                        <h4 class="title">Forane Points Table</h4>
+                                                        <p class="category">Only published results are considered</p>
+                                                    </div>
+                                                    <div class="card-content table-responsive">
+                                                        <table class="table table-hover">
+                                                            <thead class="text-info">
+                                                                <th>RANK</th>
+                                                                <th style="text-align: left">FORANE</th>
+                                                                <th>POINTS</th>
+                                                            </thead>
+                                                            <tbody>
+                                        
+                                    ';
+                                    $count=1;
+                                    while($row = mysqli_fetch_array($res)){
+                                    
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $count++; ?></td>
+                                                <td style="text-align: left"><?php echo $row['FORANE']; ?></td>
+                                                <td><?php echo $row['F_POINTS']; ?></td>
+                                            </tr>
+                                            <?php
+                                        }                                    
+                                        ?>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    <?php
+                                }
+                            }
+                        ?>
+
+
+                        <?php
+                            if ($res = mysqli_query($connect,"SELECT md.PARISH, md.FORANE, SUM(md.POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.SECTION = md.SECTION WHERE e.STATUS='PUBLISHED' AND md.STATUS='PRESENT' GROUP BY md.PARISH, md.FORANE ORDER BY SUM(md.POINTS) DESC, SUM(md.RANK_POINTS) DESC, SUM(md.GRADE_POINTS) DESC, PARISH ASC")){
+                                if(mysqli_num_rows($res)){
+                                    echo '
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div style="text-align: center">
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -189,7 +237,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -203,8 +251,6 @@ if(!isset($_SESSION['uid'])){
                                                                 <th style="text-align: left">FULL_NAME</th>
                                                                 <th style="text-align: left">PARISH</th>
                                                                 <th style="text-align: left">FORANE</th>
-                                                                <th>RANK POINTS</th>
-                                                                <th>GRADE POINTS</th>
                                                             </thead>
                                                             <tbody>
                                         
@@ -219,8 +265,6 @@ if(!isset($_SESSION['uid'])){
                                                 <td style="text-align: left"><?php echo $row['FULL_NAME']; ?></td>
                                                 <td style="text-align: left"><?php echo $row['PARISH']; ?></td>
                                                 <td style="text-align: left"><?php echo $row['FORANE']; ?></td>
-                                                <td><?php echo $row['idv_rkpoint']; ?></td>
-                                                <td><?php echo $row['idv_grdpoint']; ?></td>
                                             </tr>
                                             <?php
                                         }                                    
@@ -235,9 +279,6 @@ if(!isset($_SESSION['uid'])){
                                 }
                             }
                         ?>
-
-                        
-
                         <?php
                             if ($res = mysqli_query($connect,"SELECT md.PARISH, md.FORANE, SUM(POINTS) AS F_POINTS FROM `master_data` md JOIN `events` e on e.STATUS='PUBLISHED' JOIN `parish_category` pc on pc.PARISH = md.PARISH WHERE md.STATUS='PRESENT' AND pc.CATEGORY='Category-I' GROUP BY md.FORANE, pc.CATEGORY, md.PARISH ORDER BY pc.CATEGORY, SUM(POINTS) DESC, SUM(RANK_POINTS) DESC, SUM(GRADE_POINTS) DESC")){
                                 if(mysqli_num_rows($res)){
@@ -245,7 +286,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -297,7 +338,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -349,7 +390,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -401,7 +442,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -453,7 +494,7 @@ if(!isset($_SESSION['uid'])){
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12">
                                                 <div style="text-align: center">
-                                                    <img src="assets/img/BK_Flag.jpg" class="logo" />
+                                                    <img src="assets/img/BK_Flag.png" class="logo" />
                                                 </div>
                                                 <div class="card">
                                                     <div class="card-header" data-background-color="blue">
@@ -531,13 +572,13 @@ if(!isset($_SESSION['uid'])){
             $('#movement').owlCarousel({
                 items: 1,
                 autoplay: true,
-                navSpeed: 14000,
+                navSpeed: 7000,
                 loop: true
             });
 
             setInterval(() => {
                 window.location.reload();
-            }, (24000*10));
+            }, (60000*10));
 
         });
     

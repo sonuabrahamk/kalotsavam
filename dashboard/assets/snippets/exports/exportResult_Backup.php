@@ -90,7 +90,7 @@ $html = <<<EOD
 </div>
 <hr/>
 <h5 style="text-align: center;">$event ($cat) Results</h5>
-<table cellpadding="8px" style="font-size: 10px; padding-left: 23%;" border="1">
+<table cellpadding="8px" margin-left="200" style="font-size: 10px; padding-left: 23%;" border="1">
         <tr>
             <th style="width: 25%;padding: 5px 0; font-weight: bold; font-size: 12px;">Participant</th>
             <th style="width: 10%;padding: 5px 0; font-weight: bold; font-size: 12px;">GRADE</th>

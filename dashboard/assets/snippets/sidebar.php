@@ -89,6 +89,13 @@ Tip 2: you can also add an image using data-image tag
                     <p>Results</p>
                 </a>
             </li>
+            
+            <li class="drop-down">
+                <a href="results_mobile.php">
+                    <i class="material-icons">emoji_events</i>
+                    <p>Results To Mobile</p>
+                </a>
+            </li>
             <?php
                 if(($_SESSION['category'] == 'SUPERADMIN')||($_SESSION['category'] == 'CERTIFICATE')){
             ?>
