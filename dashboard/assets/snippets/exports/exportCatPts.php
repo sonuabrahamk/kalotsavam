@@ -64,7 +64,7 @@ if($res = mysqli_query($connect,$sql)){
 
 $html = <<<EOD
 <div style="text-align: center;">
-<img src="../../img/BK_flag.jpg" height="100px" />
+<img src="https://kalotsavam.cbcmandya.com/assets/img/BK_flag.jpg" height="100px" />
 </div>
 <hr/>
 <h5 style="text-align: center;"> $cat Parish Points Table</h5>

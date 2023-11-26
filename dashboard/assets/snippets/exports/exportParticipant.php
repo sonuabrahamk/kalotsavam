@@ -81,7 +81,7 @@ while($row = mysqli_fetch_array($result))
 }
 
 $html = <<<EOD
-<img src="../../img/BK_flag.jpg" /> <hr/>
+<img src="https://kalotsavam.cbcmandya.com/assets/img/BK_flag.jpg" /> <hr/>
 <h5 style="text-align: center;">Participant List</h5>
 <table cellpadding="8px" style="font-size: 10px;" border="1">
     <tr>

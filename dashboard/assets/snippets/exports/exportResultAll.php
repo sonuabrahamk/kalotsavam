@@ -43,7 +43,7 @@ $pdf->AddPage();
 
 $content = '';
 
-$sql = "SELECT * FROM `master_data` mdata JOIN `events` e on e.STATUS='PUBLISHED' AND e.SECTION = mdata.SECTION WHERE e.STATUS='PUBLISHED' AND RANK > 0 AND RANK < 4 ORDER BY RANK ASC, CHEST_NO ASC";
+$sql = "SELECT * FROM `master_data` mdata JOIN `events` e on e.STATUS='PUBLISHED' AND e.SECTION = mdata.SECTION WHERE e.STATUS='PUBLISHED' AND RANK > 0 AND RANK < 4 ORDER BY e.CERTIFICATE ASC, RANK ASC, CHEST_NO ASC";
 
 require('../connect.php');
 
@@ -87,7 +87,7 @@ if($res = mysqli_query($connect,$sql)){
 
 $html = <<<EOD
 <div style="text-align: center;">
-<img src="../../img/BK_flag.jpg" height="100px" />
+<img src="https://kalotsavam.cbcmandya.com/assets/img/BK_flag.jpg" height="100px" />
 </div>
 <hr/>
 <h5 style="text-align: center;">Consolidated Results</h5>

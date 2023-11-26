@@ -537,7 +537,7 @@ if(!isset($_SESSION['uid'])){
 
             setInterval(() => {
                 window.location.reload();
-            }, (24000*10));
+            }, (600000));
 
         });
     
